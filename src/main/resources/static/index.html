@@ -1,64 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
     <title>MP3 Player</title>
 </head>
 <body>
-<audio id="audio" controls>
-    <source id="audioSource" src="" type="audio/mpeg">
-</audio>
+    <div id="container-primary">
+        <div id="audio-container">
+            <div>
+                <img id="img-primary" src="https://3.bp.blogspot.com/-4wcN0ozvGOI/UUo5hNcOtzI/AAAAAAAAGS8/F4dwdj5uCKo/s1600/Wallpaper+-+Sound+Designer+Conect.jpg"/>
+            </div>
+            <audio id="audio" controls>
+                <source id="audioSource" src="" type="audio/mpeg">
+            </audio>
 
-<button id="playBtn">Play</button>
-<button id="stopBtn">Stop</button>
-<button id="backBtn">Back</button>
-<button id="nextBtn">Next</button>
-
-<script>
-    const audio = document.getElementById('audio');
-    const audioSource = document.getElementById('audioSource');
-    const playBtn = document.getElementById('playBtn');
-    const stopBtn = document.getElementById('stopBtn');
-    const backBtn = document.getElementById('backBtn');
-    const nextBtn = document.getElementById('nextBtn');
-
-    const songs = ['guitar-loop', 'orchestra', 'street-drumloop', 'typical-trap-loop'];
-    let currentSongIndex = 0;
-
-    function loadSong(index) {
-        audioSource.src = `/api/mp3/${songs[index]}`;
-        audio.load();
-    }
-
-    playBtn.addEventListener('click', () => {
-        audio.play();
-    });
-
-    stopBtn.addEventListener('click', () => {
-        audio.pause();
-        audio.currentTime = 0;
-    });
-
-    backBtn.addEventListener('click', () => {
-        if (currentSongIndex > 0) {
-            currentSongIndex--;
-        } else {
-            currentSongIndex = songs.length - 1;
-        }
-        loadSong(currentSongIndex);
-        audio.play();
-    });
-
-    nextBtn.addEventListener('click', () => {
-        if (currentSongIndex < songs.length - 1) {
-            currentSongIndex++;
-        } else {
-            currentSongIndex = 0;
-        }
-        loadSong(currentSongIndex);
-        audio.play();
-    });
-
-    loadSong(currentSongIndex);
-</script>
+            <div id="songs"></div>
+        </div>
+    </div>
 </body>
+<script src="js/script.js"></script>
 </html>

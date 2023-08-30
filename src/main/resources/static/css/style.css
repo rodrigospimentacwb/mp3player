@@ -1,0 +1,88 @@
+html, body {
+        height: 100%;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #audio {
+        width: 600px;
+        margin-top: 20px;
+    }
+
+    #audio-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+
+    #actions-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+    }
+    #songs {
+        width: 100%;
+        height: 400px;
+        background-color: #4F4F4F;
+        margin-top: 40px;
+        border-radius: 10px;
+        overflow-y:scroll;
+        scrollbar-color: black;
+    }
+
+
+    .song-container {
+        color: white;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        margin: 20px;
+    }
+
+    .song-subcontainer{
+        display: flex;
+        align-items: center;
+    }
+
+    .song-subcontainer span {
+        margin-left: 10px;
+    }
+
+    .note-icon{
+        width: 20px;
+        height: 20px;
+    }
+    .play-song {
+        width: 30px;
+        height: 30px;
+    }
+    .playBtn{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .song-container-2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .actions-song {
+        align-self: flex-end;
+    }
+    #container-primary {
+        background-color: #4F4F4F;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    }
+    #img-primary{
+        width: 500px;
+        height: 400px;
+    }
